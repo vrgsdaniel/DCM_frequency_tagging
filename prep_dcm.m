@@ -2,9 +2,9 @@ spm('defaults','EEG');
 %--------------------------------------------------------------------------
 % Data filename
 %--------------------------------------------------------------------------
-DCM.xY.Dfile  = 'C:\Users\dvargas\Documents\bccn\soekadar\lab_rotation\binocular_frequency_tagging\sham2104\spmeeg_sham_dominances_epo.mat';
+DCM.xY.Dfile  = 'C:\Users\dvargas\Documents\bccn\soekadar\lab_rotation\binocular_frequency_tagging\DCM_frequency_tagging\sham2104\spmeeg_sham_dominances_epo.mat';
 DCM.xY.modality  = 'EEG'; 
-DCM.name = 'C:\Users\dvargas\Documents\bccn\soekadar\lab_rotation\binocular_frequency_tagging\test\DCM_spmeeg_sham_dominances_epo_test.mat';
+DCM.name = 'C:\Users\dvargas\Documents\bccn\soekadar\lab_rotation\binocular_frequency_tagging\DCM_frequency_tagging\DCMs\4Modes\full_model\DCM3005_3inputs.mat';
 
 %--------------------------------------------------------------------------
 % Parameters and options used for setting up model
@@ -13,7 +13,7 @@ DCM.options.analysis = 'IND';
 DCM.options.model = 'ERP';
 DCM.options.spatial =  'ECD';
 DCM.options.trials = [1 2];
-DCM.options.Tdcm = [-50 100] ;
+DCM.options.Tdcm = [-50 400] ;
 DCM.options.Fdcm = [9 17];
 DCM.options.Rft = 20;
 DCM.options.onset = 64;
@@ -31,8 +31,8 @@ DCM.options.symmetry = 0;
 % Between trial effects
 %--------------------------------------------------------------------------
 
-DCM.xU.X = [-1; 1];
-DCM.xU.name = {'name'};
+DCM.xU.X = [0; 1];
+DCM.xU.name = {'switch'};
 
 %--------------------------------------------------------------------------
 % Data and spatial model
